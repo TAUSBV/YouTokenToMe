@@ -26,14 +26,15 @@ with io.open(
 
 setup(
     name="youtokentome",
-    version="1.0.6",
+    use_incremental=True,
+    setup_requires=['incremental'],
     packages=find_packages(),
     description="Unsupervised text tokenizer focused on computational efficiency",
     long_description=LONG_DESCRIPTION,
     long_description_content_type="text/markdown",
     url="https://github.com/vkcom/youtokentome",
     python_requires=">=3.5.0",
-    install_requires=["Click>=7.0"],
+    install_requires=["Click>=7.0", "incremental"],
     entry_points={"console_scripts": ["yttm = youtokentome.yttm_cli:main"]},
     author="Ivan Belonogov",
     license="MIT",
